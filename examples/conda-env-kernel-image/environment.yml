@@ -1,10 +1,17 @@
-name: myenv
+name: geospatial-env
 channels:
   - conda-forge
 dependencies:
-  - python=3.8
-  - numpy
   - awscli
   - boto3
   - ipykernel
-
+  - vim
+  - wget
+  - python=3.10
+  - numpy
+  - pandas
+  - rioxarray
+  - rasterio
+  - geopandas
+  - matplotlib
+ 

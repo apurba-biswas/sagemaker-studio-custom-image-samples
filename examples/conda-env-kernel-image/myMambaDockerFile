@@ -1,0 +1,6 @@
+# myDockerFile using micromamba
+
+FROM mambaorg/micromamba:0.24.0
+COPY mamba_environment.yaml .
+RUN micromamba install -y -n base -f mamba_environment.yaml && \
+    micromamba clean --all --yes

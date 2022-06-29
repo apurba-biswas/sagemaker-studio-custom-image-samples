@@ -3,25 +3,29 @@
 
 ### Overview
 
-This custom image sample demonstrates how to create a custom Conda environment in a Docker image and use it as a custom kernel in SageMaker Studio. 
+This custom image example demonstrates how to create a custom Conda environment in a Docker image and use it as a custom kernel in SageMaker Studio.
+The Conda environment must have the appropriate kernel package installed, for e.g., `ipykernel` for a Python kernel.
 
-The Conda environment must have the appropriate kernel package installed, for e.g., `ipykernel` for a Python kernel. This example creates a Conda environment called `myenv` with a few Python packages (see [environment.yml](environment.yml)) and the `ipykernel`. SageMaker Studio will automatically recognize this Conda environment as a kernel named `conda-env-myenv-py` (See  [app-image-config-input.json](app-image-config-input.json))
+This example creates a Conda environment called `geospatial-env` (see [environment.yml](environment.yml))
+
+`docker build` looks for a Dockerfile, which references the environment.yml -> hence change environment before running docker build
+
+SageMaker Studio will automatically recognize this Conda environment as a kernel named `conda-env-myenv-py` (See [app-image-config-input.json](app-image-config-input.json)
 
 ### Building the image
 
 Build the Docker image and push to Amazon ECR. 
 ```
-# Modify these as required. The Docker registry endpoint can be tuned based on your current region from https://docs.aws.amazon.com/general/latest/gr/ecr.html#ecr-docker-endpoints
+# The Docker registry endpoint can be tuned based on your current region from https://docs.aws.amazon.com/general/latest/gr/ecr.html#ecr-docker-endpoints
 REGION=<aws-region>
 ACCOUNT_ID=<aws-account-id>
-IMAGE_NAME=conda-env-kernel
+IMAGE_NAME=geospatial-env-kernel
 
-# Create ECR Repository. Ignore if it exists. For simplcity, all examples in the repo
-# use same ECR repo with different image tags
-aws --region ${REGION} ecr create-repository --repository-name smstudio-custom
+# Create ECR Repository
+aws --region ${REGION} ecr create-repository --repository-name sm-geospatial
 
 # Build and push the image
-aws --region ${REGION} ecr get-login-password | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom
+aws --region ${REGION} ecr get-login-password | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/sm-geospatial
 docker build . -t ${IMAGE_NAME} -t ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom:${IMAGE_NAME}
 docker push ${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom:${IMAGE_NAME}
 ```

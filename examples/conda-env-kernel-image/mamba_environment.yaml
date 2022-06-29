@@ -1,0 +1,9 @@
+# mamba wants env name to be base...
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - awscli
+  - boto3
+  - ipykernel
+  - python=3.10
