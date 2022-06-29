@@ -1,1 +1,0 @@
-FROM almondsh/almond:0.10.3-scala-2.13.3
