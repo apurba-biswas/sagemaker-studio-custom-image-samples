@@ -2,6 +2,10 @@
 
 Modified by Apu for Trove Research
 
+Examples run within AWS Cloud 9 environment
+    - use a bigger instance (with more RAM) to create a large docker images
+    - clone this repository
+
 ### Overview
 
 This repository contains examples of Docker images that are valid custom images for KernelGateway Apps in SageMaker Studio. These custom images enable you to bring your own packages, files, and kernels for use with notebooks, terminals, and interactive consoles within SageMaker Studio.
