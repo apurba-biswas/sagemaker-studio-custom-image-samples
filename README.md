@@ -3,6 +3,7 @@
 Modified by Apu for Trove Research
 
 Examples run within AWS Cloud 9 environment
+
     - use a bigger instance (with more RAM) to create a large docker images
     - clone this repository
     - set evironment variable names/run bash script in examples
