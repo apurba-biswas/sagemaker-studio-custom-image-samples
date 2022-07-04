@@ -12,7 +12,7 @@ This example creates a Conda environment called `geospatial-env` (see [environme
 
 SageMaker Studio will automatically recognize this Conda environment as a kernel named `conda-env-myenv-py` (See [app-image-config-input.json](app-image-config-input.json)
 
-### Building the image
+### Building the image - use Coiled or below
 
 Build the Docker image and push to Amazon ECR. 
 ```
