@@ -3,7 +3,7 @@
     "KernelGatewayImageConfig": {
         "KernelSpecs": [
             {
-                "Name": "conda-env-geospatial-v1-py",
+                "Name": "geospatial-v1",
                 "DisplayName": "Python [conda env: geospatial-v1]"
             }
         ],

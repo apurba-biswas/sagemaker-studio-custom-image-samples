@@ -4,7 +4,7 @@
         "KernelGatewayAppSettings": {
             "CustomImages": [
                 {
-                    "ImageName": "geospatial-v1-env-kernel",
+                    "ImageName": "geospatial-v1",
                     "AppImageConfigName": "geospatial-v1-env-kernel-config"
                 }
             ]
