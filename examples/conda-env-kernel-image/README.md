@@ -72,6 +72,9 @@ If you have an existing Domain, you can also use the `update-domain`
 aws --region ${REGION} sagemaker update-domain --cli-input-json file://update-domain-input.json
 ```
 
+When updating domain, add the image name and the image-config to json and then update
+i.e. all custom images should be in the json 
+
 Create a User Profile, and start a Notebook using the SageMaker Studio launcher.
 
 ### Update Image with SageMaker Studio
