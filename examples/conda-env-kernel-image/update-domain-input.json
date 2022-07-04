@@ -7,14 +7,14 @@
                     "ImageName": "conda-env-kernel",
                     "AppImageConfigName": "conda-env-kernel-config"
                 }
-#                {
-#                   "ImageName": "conda-env-kernel",
-#                    "AppImageConfigName": "conda-env-kernel-config"
-#                },
-#                {
-#                    "ImageName": "conda-env-kernel",
-#                    "AppImageConfigName": "conda-env-kernel-config"
-#                }
+##                {
+##                   "ImageName": "conda-env-kernel",
+##                    "AppImageConfigName": "conda-env-kernel-config"
+##                },
+##                {
+##                    "ImageName": "conda-env-kernel",
+##                   "AppImageConfigName": "conda-env-kernel-config"
+##                }
             ]
         }
     }
