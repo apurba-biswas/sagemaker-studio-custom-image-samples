@@ -1,10 +1,10 @@
 {
-    "AppImageConfigName": "conda-env-kernel-config",
+    "AppImageConfigName": "geospatial-v1-env-kernel-config",
     "KernelGatewayImageConfig": {
         "KernelSpecs": [
             {
-                "Name": "conda-env-myenv-py",
-                "DisplayName": "Python [conda env: myenv]"
+                "Name": "conda-env-geospatial-v1-py",
+                "DisplayName": "Python [conda env: geospatial-v1]"
             }
         ],
         "FileSystemConfig": {

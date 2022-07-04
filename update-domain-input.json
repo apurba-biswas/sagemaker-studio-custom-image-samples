@@ -1,0 +1,13 @@
+{
+    "DomainId": "d-1wlhbekoothi",
+    "DefaultUserSettings": {
+        "KernelGatewayAppSettings": {
+            "CustomImages": [
+                {
+                    "ImageName": "geospatial-v1-env-kernel",
+                    "AppImageConfigName": "geospatial-v1-env-kernel-config"
+                }
+            ]
+        }
+    }
+}
