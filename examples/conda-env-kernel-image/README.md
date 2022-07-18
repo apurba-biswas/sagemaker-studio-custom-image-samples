@@ -46,6 +46,7 @@ aws --region ${REGION} sagemaker create-image \
     --image-name ${IMAGE_NAME} \
     --role-arn ${ROLE_ARN}
 
+# Get base image URI from ECR
 aws --region ${REGION} sagemaker create-image-version \
     --image-name ${IMAGE_NAME} \
     --base-image "${ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/smstudio-custom:${IMAGE_NAME}"
