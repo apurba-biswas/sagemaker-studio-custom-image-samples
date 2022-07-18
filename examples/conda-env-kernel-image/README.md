@@ -40,6 +40,7 @@ See [Update Image](#updating-image-with-sageMaker-studio)
 # Role in your account to be used for SageMakerImage. Modify as required.
 # This creates an "image-repository" - or an empty image with a name viewable in Sagemaker images
 
+# Get ROLEARN executioner role from Sagemaker control panel 
 ROLE_ARN=arn:aws:iam::${ACCOUNT_ID}:role/RoleName
 aws --region ${REGION} sagemaker create-image \
     --image-name ${IMAGE_NAME} \
